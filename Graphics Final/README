@@ -1,0 +1,32 @@
+Sean Patterson
+
+The program should run just by unpacking, making, and running it. 
+
+My program is a rocket launching from a farm of sorts.
+
+I started with the rocket. Originally, this object was created using 3 cylinders and 3 cones with 2 different textures. I added rings to the bottom of each cylinder in order to portray an exhaust housing. This ring was created by drawing two cylinders in vector space, and then using quads to draw the difference between the two, then erasing everything besides the difference. The ring also expands outward at the bottom based on the final parameter given to the function. I adjusted these to be close, but not touching eachother.
+
+Then, I built the tower and the platform. This was relatively simple, as they are all box shapes.
+
+After completing the tower and the platform I moved on to animation. I used the t value given in the idle function in order to do this. When the launch button is pressed, the arms connecting the tower to the rocket back into the tower, giving the rocket space, and the rocket starts rising exponentially shortly afterward. I have adjusted the camera to start from base level at whatever angle you have chosen, and follow the rocket up along it's journey.
+
+I then added the grass landscape and some barns to give the scene more of a farm feel. I know that the two themes clash, but that was part of the game (SpaceFarm) that my friends and I had worked on previously, of which this is a part of. 
+
+I spent many hours trying to figure out a way to make flames using shaders. I had trouble getting glew to work correctly on my computer(windows) for a long time, and after finally figuring out the issue, immediately started searching for a way to simulate exhaust. Ultimately, I was unsuccessful in doing this within our allotted time for the project. I first tried to create the fire myself, but found that it was taking me too much time, so I switched to trying to jerry rig some c++ code that I found online (github user FairZ) to use within my project. It occurred to me far too late into the project that my time might be better used elsewhere, as I wasn't making sufficient progress with shaders and a particle engine. I spent about 50% of my total project time on this. I am looking to continue working on this aspect of the project after the class has finished, because I have already invested time, and I would like to figure it out. 
+
+Key bindings
+  g          Launch Rocket
+  l          Toggle lighting on/off
+  t          Change textures
+  m          Toggles texture mode modulate/replace
+  a/A        decrease/increase ambient light
+  d/D        decrease/increase diffuse light
+  s/S        decrease/increase specular light
+  e/E        decrease/increase emitted light
+  n/N        Decrease/increase shininess
+  []         Lower/rise light
+  x          Toggle axes
+  arrows     Change view angle
+  PgDn/PgUp  Zoom in and out
+  0          Reset view angle
+  ESC        Exit
